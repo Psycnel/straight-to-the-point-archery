@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #228B22; /* Forest Green */
+    padding: 15px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a:hover {
+    color: #DAA520; /* Gold */
+}
