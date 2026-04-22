@@ -494,4 +494,43 @@ footer p {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* =========================
+   ICON STYLES
+========================= */
+i {
+    margin-right: 8px;
+}
+
+.fa-phone,
+.fa-envelope,
+.fa-map-marker-alt,
+.fa-check-circle,
+.fa-star,
+.fa-info-circle,
+.fa-bullseye,
+.fa-history,
+.fa-warehouse,
+.fa-handshake,
+.fa-users,
+.fa-home,
+.fa-user-graduate,
+.fa-chalkboard-teacher {
+    color: var(--gold-accent);
+}
+
+nav a i {
+    margin-right: 6px;
+}
+
+aside i,
+footer i,
+h1 i,
+h2 i,
+h3 i {
+    color: var(--gold-accent);
+}
 }
