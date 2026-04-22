@@ -213,3 +213,18 @@ footer {
     color: #228B22; /* Forest Green */
     margin-bottom: 10px;
 }
+/* CONTACT PAGE */
+.contact-info {
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-info a {
+    color: #228B22; /* Forest Green */
+    text-decoration: none;
+}
+
+.map {
+    padding: 40px;
+    text-align: center;
+}
