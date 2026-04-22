@@ -31,6 +31,28 @@ body {
 }
 
 /* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
    IMAGES
 ========================= */
 img {
@@ -42,21 +64,15 @@ img {
    HEADER
 ========================= */
 header {
+    background-color: var(--deep-brown);
+    color: var(--white);
+    padding: 15px 0;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--deep-brown);
-    color: var(--white);
-    padding: 15px 40px;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.6;
 }
 
 .logo img {
@@ -107,14 +123,12 @@ nav a:hover {
 
 .hero h1 {
     font-size: 48px;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 18px;
     margin: 15px 0 20px;
-    font-family: 'Open Sans', sans-serif;
 }
 
 /* =========================
@@ -143,8 +157,11 @@ section {
     text-align: center;
 }
 
+section:nth-of-type(even) {
+    background-color: var(--white);
+}
+
 section h2 {
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
     color: var(--forest-green);
 }
@@ -163,7 +180,6 @@ section p {
 }
 
 .page-header h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     color: var(--forest-green);
     margin-bottom: 15px;
@@ -175,7 +191,7 @@ section p {
 }
 
 /* =========================
-   CLASS ARTICLES
+   ARTICLES
 ========================= */
 article {
     margin: 15px 0;
@@ -203,7 +219,6 @@ article {
 .class-card h2 {
     color: var(--forest-green);
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .class-card ul {
@@ -253,7 +268,6 @@ article {
 .instructor-card h2 {
     color: var(--forest-green);
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 /* =========================
@@ -289,7 +303,6 @@ aside {
 }
 
 aside h3 {
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
 
