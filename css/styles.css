@@ -597,4 +597,34 @@ footer p {
     .instructor-card {
         max-width: 100%;
     }
+    
+}
+/* =========================
+   ACCESSIBILITY - FOCUS STATES
+========================= */
+a:focus,
+button:focus,
+.btn:focus,
+.skip-link:focus {
+    outline: 2px solid var(--gold-accent);
+    outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--gold-accent);
+    outline-offset: 3px;
+}
+/* =========================
+   ACCESSIBILITY - REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }
