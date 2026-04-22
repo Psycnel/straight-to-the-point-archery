@@ -33,6 +33,28 @@ body {
 }
 
 /* =========================
+   ACCESSIBILITY - SKIP LINK
+========================= */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background-color: var(--white);
+    color: var(--dark-text);
+    padding: 10px 16px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 6px 0;
+    box-shadow: var(--shadow);
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* =========================
    TYPOGRAPHY
 ========================= */
 h1, h2, h3, h4, h5, h6 {
@@ -59,6 +81,7 @@ p {
 ========================= */
 img {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -109,6 +132,64 @@ nav a.active {
     color: var(--gold-accent);
 }
 
+nav a i {
+    margin-right: 6px;
+}
+
+nav a:hover i {
+    transform: scale(1.1);
+}
+
+i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* =========================
+   ICON STYLES
+========================= */
+.fa-phone,
+.fa-envelope,
+.fa-map-marker-alt,
+.fa-check-circle,
+.fa-star,
+.fa-info-circle,
+.fa-bullseye,
+.fa-history,
+.fa-warehouse,
+.fa-handshake,
+.fa-users,
+.fa-home,
+.fa-user-graduate,
+.fa-chalkboard-teacher,
+.fa-calendar-alt,
+.fa-calendar-check,
+.fa-comments,
+.fa-map,
+.fa-search,
+.fa-lightbulb,
+.fa-paper-plane,
+.fa-arrow-right,
+.fa-clock,
+.fa-dollar-sign,
+.fa-signal,
+.fa-trophy,
+.fa-child,
+.fa-user,
+.fa-seedling,
+.fa-chart-line,
+.fa-shield-alt {
+    color: var(--gold-accent);
+}
+
+aside i,
+footer i,
+h1 i,
+h2 i,
+h3 i {
+    color: var(--gold-accent);
+}
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -125,6 +206,7 @@ nav a.active {
     margin: 20px auto 0;
     width: 90%;
     max-width: 1200px;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .hero-content {
@@ -244,6 +326,16 @@ article {
 }
 
 /* =========================
+   REUSABLE CARD
+========================= */
+.card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* =========================
    CARD STYLES
 ========================= */
 .class-card,
@@ -337,6 +429,11 @@ aside {
     object-fit: cover;
     margin: 0 auto 15px;
     border: 3px solid var(--gold-accent);
+    transition: transform 0.3s ease;
+}
+
+.instructor-card img:hover {
+    transform: scale(1.05);
 }
 
 .instructor-card h2 {
@@ -432,6 +529,18 @@ footer p {
 }
 
 /* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================
    RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 992px) {
@@ -488,49 +597,4 @@ footer p {
     .instructor-card {
         max-width: 100%;
     }
-    .card {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-/* =========================
-   ICON STYLES
-========================= */
-i {
-    margin-right: 8px;
-}
-
-.fa-phone,
-.fa-envelope,
-.fa-map-marker-alt,
-.fa-check-circle,
-.fa-star,
-.fa-info-circle,
-.fa-bullseye,
-.fa-history,
-.fa-warehouse,
-.fa-handshake,
-.fa-users,
-.fa-home,
-.fa-user-graduate,
-.fa-chalkboard-teacher {
-    color: var(--gold-accent);
-}
-
-nav a i {
-    margin-right: 6px;
-}
-
-aside i,
-footer i,
-h1 i,
-h2 i,
-h3 i {
-    color: var(--gold-accent);
-}
 }
