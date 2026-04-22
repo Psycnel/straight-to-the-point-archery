@@ -128,7 +128,9 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.active,
+nav a:focus,
+nav a:focus-visible {
     color: var(--gold-accent);
 }
 
@@ -136,7 +138,9 @@ nav a i {
     margin-right: 6px;
 }
 
-nav a:hover i {
+nav a:hover i,
+nav a:focus i,
+nav a:focus-visible i {
     transform: scale(1.1);
 }
 
@@ -178,7 +182,8 @@ i {
 .fa-user,
 .fa-seedling,
 .fa-chart-line,
-.fa-shield-alt {
+.fa-shield-alt,
+.fa-check {
     color: var(--gold-accent);
 }
 
@@ -194,7 +199,7 @@ h3 i {
    HERO SECTION
 ========================= */
 .hero {
-    background: url('../images/hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero-large.jpg') no-repeat center center/cover;
     min-height: 500px;
     display: flex;
     justify-content: center;
@@ -240,7 +245,9 @@ h3 i {
     transition: background-color var(--transition), transform var(--transition);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus,
+.btn:focus-visible {
     background-color: #b8860b;
     transform: translateY(-2px);
 }
@@ -271,8 +278,9 @@ section p {
    PAGE HEADER
 ========================= */
 .page-header {
-    background: linear-gradient(rgba(129, 230, 129, 0.75), rgba(117, 73, 53, 0.75)),
-                url('../images/hero.jpg') no-repeat center center/cover;
+    background:
+        linear-gradient(rgba(129, 230, 129, 0.75), rgba(117, 73, 53, 0.75)),
+        url('../images/hero-large.jpg') no-repeat center center/cover;
     color: var(--white);
     border-radius: var(--radius);
     margin: 20px auto;
@@ -354,7 +362,9 @@ aside {
 }
 
 .class-card:hover,
-.instructor-card:hover {
+.class-card:focus-within,
+.instructor-card:hover,
+.instructor-card:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
@@ -432,7 +442,8 @@ aside {
     transition: transform 0.3s ease;
 }
 
-.instructor-card img:hover {
+.instructor-card img:hover,
+.instructor-card img:focus {
     transform: scale(1.05);
 }
 
@@ -466,7 +477,11 @@ address a {
 }
 
 .contact-info a:hover,
-address a:hover {
+.contact-info a:focus,
+.contact-info a:focus-visible,
+address a:hover,
+address a:focus,
+address a:focus-visible {
     color: var(--gold-accent);
 }
 
@@ -541,9 +556,43 @@ footer p {
 }
 
 /* =========================
+   ACCESSIBILITY - FOCUS STATES
+========================= */
+a:focus,
+button:focus,
+.btn:focus,
+.skip-link:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--gold-accent);
+    outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--gold-accent);
+    outline-offset: 3px;
+}
+
+/* =========================
    RESPONSIVE DESIGN
 ========================= */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
+    .hero {
+        background-image: url('../images/hero-medium.jpg');
+    }
+
+    .page-header {
+        background:
+            linear-gradient(rgba(129, 230, 129, 0.75), rgba(117, 73, 53, 0.75)),
+            url('../images/hero-medium.jpg') no-repeat center center/cover;
+    }
+
     .classes,
     .instructors {
         grid-template-columns: repeat(2, 1fr);
@@ -597,25 +646,20 @@ footer p {
     .instructor-card {
         max-width: 100%;
     }
-    
-}
-/* =========================
-   ACCESSIBILITY - FOCUS STATES
-========================= */
-a:focus,
-button:focus,
-.btn:focus,
-.skip-link:focus {
-    outline: 2px solid var(--gold-accent);
-    outline-offset: 3px;
 }
 
-a:focus-visible,
-button:focus-visible,
-.btn:focus-visible {
-    outline: 2px solid var(--gold-accent);
-    outline-offset: 3px;
+@media (max-width: 600px) {
+    .hero {
+        background-image: url('../images/hero-small.jpg');
+    }
+
+    .page-header {
+        background:
+            linear-gradient(rgba(129, 230, 129, 0.75), rgba(117, 73, 53, 0.75)),
+            url('../images/hero-small.jpg') no-repeat center center/cover;
+    }
 }
+
 /* =========================
    ACCESSIBILITY - REDUCED MOTION
 ========================= */
