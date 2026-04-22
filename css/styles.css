@@ -1,96 +1,63 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #228B22; /* Forest Green */
-    padding: 15px;
+/* =========================
+   COLOR VARIABLES
+========================= */
+:root {
+    --forest-green: #228B22;
+    --deep-brown: #5C4033;
+    --gold-accent: #DAA520;
+    --cream-white: #F5F5DC;
+    --dark-text: #333333;
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo img {
-    height: 60px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav a:hover {
-    color: #DAA520; /* Gold */
-}
-.hero {
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 15px 0;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.btn {
-    background-color: #DAA520; /* Gold */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #b8860b;
-}
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #F5F5DC; /* Cream */
-    color: #333;
+    background-color: var(--cream-white);
+    color: var(--dark-text);
     line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    background-color: #228B22; /* Forest Green */
-    color: white;
-    padding: 15px 40px;
+/* =========================
+   IMAGES
+========================= */
+img {
+    max-width: 100%;
+    display: block;
+}
 
+/* =========================
+   HEADER
+========================= */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 15px 40px;
 }
 
-/* NAVIGATION */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 nav ul {
     list-style: none;
     display: flex;
@@ -98,58 +65,70 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #DAA520; /* Gold */
+    color: var(--gold-accent);
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
-    height: 90vh;
     background: url('../images/hero.jpg') no-repeat center center/cover;
-
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--white);
+    padding: 20px;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10px;
+    max-width: 700px;
 }
 
 .hero h1 {
     font-size: 48px;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    margin: 15px 0;
+    font-size: 18px;
+    margin: 15px 0 20px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTONS
+========================= */
 .btn {
     display: inline-block;
-    background-color: #DAA520; /* Gold */
-    color: white;
+    background-color: var(--gold-accent);
+    color: var(--white);
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn:hover {
     background-color: #b8860b;
 }
 
-/* SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 section {
     padding: 60px 40px;
     text-align: center;
@@ -158,29 +137,85 @@ section {
 section h2 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
+    color: var(--forest-green);
 }
 
-/* ARTICLES (CLASSES) */
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+.page-header {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: var(--forest-green);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =========================
+   CLASS ARTICLES
+========================= */
 article {
     margin: 15px 0;
 }
 
-/* ASIDE */
-aside {
-    background-color: #5C4033; /* Brown */
-    color: white;
-    padding: 30px;
-    text-align: center;
+/* =========================
+   CLASSES PAGE
+========================= */
+.classes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* FOOTER */
-footer {
-    background-color: #228B22;
-    color: white;
-    text-align: center;
+.class-card {
+    background-color: var(--white);
     padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: left;
 }
-/* INSTRUCTORS GRID */
+
+.class-card h2 {
+    color: var(--forest-green);
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.class-card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* =========================
+   SAFETY SECTION
+========================= */
+#safety {
+    background-color: var(--white);
+}
+
+#safety h2 {
+    color: var(--forest-green);
+}
+
+/* =========================
+   INSTRUCTORS PAGE
+========================= */
 .instructors {
     display: flex;
     justify-content: center;
@@ -189,42 +224,122 @@ footer {
     padding: 40px;
 }
 
-/* INSTRUCTOR CARD */
 .instructor-card {
-    background-color: white;
+    background-color: var(--white);
     width: 250px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
 }
 
-/* IMAGE */
 .instructor-card img {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* circular image */
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
-/* NAME */
 .instructor-card h2 {
-    color: #228B22; /* Forest Green */
+    color: var(--forest-green);
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
-/* CONTACT PAGE */
+
+/* =========================
+   CONTACT PAGE
+========================= */
 .contact-info {
     text-align: center;
     padding: 40px;
 }
 
 .contact-info a {
-    color: #228B22; /* Forest Green */
+    color: var(--forest-green);
     text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--gold-accent);
 }
 
 .map {
     padding: 40px;
     text-align: center;
+}
+
+/* =========================
+   ASIDE
+========================= */
+aside {
+    background-color: var(--deep-brown);
+    color: var(--cream-white);
+    padding: 30px;
+    text-align: center;
+}
+
+aside h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--deep-brown);
+    color: var(--cream-white);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .classes,
+    .instructors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .class-card,
+    .instructor-card {
+        width: 90%;
+        max-width: 320px;
+    }
 }
