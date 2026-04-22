@@ -45,9 +45,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--forest-green);
+    background-color: var(--deep-brown);
     color: var(--white);
     padding: 15px 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 .logo img {
